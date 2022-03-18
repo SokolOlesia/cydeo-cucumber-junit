@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features", //
         glue = "com/cydeo/step_definitions",
         dryRun = false, //false - код запускается полностью
-        tags = "@Google"
+        tags = "@wip"
 
 )
 public class CukesRunner {
