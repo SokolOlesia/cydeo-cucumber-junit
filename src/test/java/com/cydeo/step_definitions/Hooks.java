@@ -16,6 +16,7 @@ public class Hooks {
     @Before(order = 0)
     public void setupScenario() {
         System.out.println("====Setting up browser using cucumber @Before");
+
     }
 
     @Before(value = "@login", order = 1)
@@ -36,6 +37,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
 
+        Driver.closeDriver();
 
 //        System.out.println("====Closing browser using cucumber @After");
 //        System.out.println("====Scenario ended/ Take screenshot if failed!");
