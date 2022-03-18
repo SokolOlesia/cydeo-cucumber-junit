@@ -23,7 +23,7 @@ public class Hooks {
         System.out.println("====this will only apply to scenarios with @login tag");
     }
 
-    @Before ("@db")
+    @Before (value = "@db", order = -1)
     public void setupForDatabaseScenarios(){
         System.out.println("====this will only apply to scenarios with @db tag");
     }
