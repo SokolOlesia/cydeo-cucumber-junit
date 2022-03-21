@@ -1,7 +1,7 @@
 Feature: Wikipedia search functionality and verifications
 
   #WSF-45234
-  @wip
+
   Scenario: Wikipedia Search Functionality Title Verification
     Given User is on Wikipedia home page
     When User types "Steve Jobs" in the wiki search box
