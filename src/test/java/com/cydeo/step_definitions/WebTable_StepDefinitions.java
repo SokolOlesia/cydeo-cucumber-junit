@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.Map;
+
 public class WebTable_StepDefinitions {
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
 
@@ -39,8 +41,11 @@ public class WebTable_StepDefinitions {
 
     @When("user enters username {string} password {string} and logins")
     public void userEntersUsernamePasswordAndLogins(String username, String password) {
-        webTableLoginPage.inputUsername.sendKeys(username);
-        webTableLoginPage.inputPassword.sendKeys(password);
-        webTableLoginPage.loginButton.click();
+        webTableLoginPage.login(username,password);
+    }
+
+    @When("User enters below credentials")
+    public void userEntersBelowCredentials(Map<String,String> credentials) {
+        webTableLoginPage.login(credentials.get("username"),credentials.get("password"));
     }
 }
