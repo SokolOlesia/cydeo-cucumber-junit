@@ -63,7 +63,7 @@ public class Order_StepDefinitions {
 
     }
 
-    @When("user enters costumer name {string}")
+    @When("user enters customer name {string}")
     public void user_enters_costumer_name(String string) {
         orderPage.inputName.sendKeys(string);
     }

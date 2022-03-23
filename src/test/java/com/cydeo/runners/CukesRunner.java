@@ -6,7 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = "html:target/cucumber-reports.html", //for create new file for reports
+        plugin = {
+                "html:target/cucumber-report.html",//for create new file for reports
+                "rerun:target/rerun.txt"
+        },
         features = "src/test/resources/features", //
         glue = "com/cydeo/step_definitions",
         dryRun = false, //false - код запускается полностью
