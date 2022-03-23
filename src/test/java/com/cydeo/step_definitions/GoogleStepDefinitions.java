@@ -7,20 +7,23 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
+import java.security.Key;
+
 public class GoogleStepDefinitions {
+
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     @When("user types apple and clicks enter")
     public void user_types_and_clicks_enter2() {
 
-        googleSearchPage.inputBox.sendKeys("apple" + Keys.ENTER);
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
 
     }
 
     @When("user types {string} and clicks enter")
     public void user_types_and_clicks_enter(String searchKeyword) {
 
-        googleSearchPage.inputBox.sendKeys(searchKeyword + Keys.ENTER);
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
 
     }
 

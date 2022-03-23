@@ -7,10 +7,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class WebTableLoginPage {
+
     public WebTableLoginPage(){
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
+
     @FindBy(name = "username")
     public WebElement inputUsername;
 
@@ -45,7 +46,8 @@ public class WebTableLoginPage {
     }
 
     /**
-     * This method will log in using credentials from configuration properties
+     * This method will log in using credentials from
+     * configuration.properties
      */
     public void loginWithConfig(){
         inputUsername.sendKeys(ConfigurationReader.getProperty("web.table.username"));
@@ -53,3 +55,4 @@ public class WebTableLoginPage {
         loginButton.click();
     }
 }
+
